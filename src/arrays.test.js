@@ -13,7 +13,7 @@ it('create an array using new keyword', () => {
 
 it('create an array with length of 10', () => {
   const my10ItemsArr = new Array(10);
-  console.log(my10ItemsArr);
+  // console.log(my10ItemsArr);
   expect(my10ItemsArr.length).toEqual(10);
 });
 
@@ -52,7 +52,7 @@ it("let's use map method to manipulate data and create copy of original array", 
 
   const newArr = myArr.map((item, idx) => (idx === 1 ? 'B' : item));
 
-  console.log('myArr', myArr);
+  // console.log('myArr', myArr);
   expect(newArr[1]).toEqual('B');
 });
 

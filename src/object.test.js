@@ -144,4 +144,4 @@ const person = {
 
 const { name, age, ...rest } = person;
 
-console.log(rest, name);
+// console.log(rest, name);
