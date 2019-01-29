@@ -1,6 +1,5 @@
 //creating array
-
-it('create an array using standard method with elements in it', () => {
+it('create an array using array literal with elements in it', () => {
   const alphabet = ['a', 'b', 'c'];
   expect(alphabet).toEqual(['a', 'b', 'c']);
 });
@@ -17,18 +16,18 @@ it('create an array with length of 10', () => {
   expect(my10ItemsArr.length).toEqual(10);
 });
 
-it('create an array with 4 items in it, which the each item is string a', () => {
+it('create an array with 4 items in it, which the each item is a', () => {
   const myArr = new Array(4).fill('a');
   expect(myArr).toEqual(['a', 'a', 'a', 'a']);
 });
 
-it('create an array with  0-9 in it', () => {
+it('create an array with  natural numbers 0-9 in it', () => {
   const myNumArr = [...Array(10).keys()];
   expect(myNumArr).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
 //access an item by idx and change the value
-it('in my array make the idx = 3 to be c', () => {
+it('in my array make the idx = 3 to be C', () => {
   const myArr = new Array(5);
   myArr[3] = 'C';
 
@@ -46,17 +45,15 @@ it('add D to my alpha array', () => {
 // fun methods
 
 // problem: add item 'B' to the second position,
-// but don't mutate my original array
+// but don't mutate the original array
 it("let's use map method to manipulate data and create copy of original array", () => {
   const myArr = [1, 2, 3, 4, 5];
-
   const newArr = myArr.map((item, idx) => (idx === 1 ? 'B' : item));
-
-  console.log('myArr', myArr);
+  //console.log('myArr', myArr);
   expect(newArr[1]).toEqual('B');
 });
 
-//problem: using my studentsArray create a an array that only have their first name
+//problem: using studentsArray create an array that contains the first names
 it("should create an array with students's first name in it", () => {
   const studentsArray = [
     {
@@ -81,8 +78,8 @@ it("should create an array with students's first name in it", () => {
   expect(studentsFirstName).toEqual(['Doran', 'Buddhika', 'Erica']);
 });
 
-//problem: using my studentsData array create a new array with subjects in it,
-// but if you come across the subject as science change it to math
+//problem: using studentsData array create a new array with subjects in it,
+// if the subject is Science change that subject to Math
 
 it('create an array with subjects', () => {
   const studentsData = [
@@ -110,8 +107,7 @@ it('create an array with subjects', () => {
   expect(subjects).toEqual(['Math', 'Math', 'Math']);
 });
 
-//using my studentsData create an array which includes studentName and grade
-
+//problem: using studentsData create an array which each item is an object whose properties are name and grade
 it('should create an array with student name and grade in it', () => {
   const studentsDataById = {
     1: {
